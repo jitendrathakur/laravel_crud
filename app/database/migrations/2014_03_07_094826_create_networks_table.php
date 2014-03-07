@@ -11,8 +11,9 @@ class CreateNetworksTable extends Migration {
 	public function up()
 	{		
 
-		Schema::create('networks', function($table) {         
-			$table->increments('nid');
+		Schema::create('networks', function($table) {    
+			$table->increments('id');     
+			$table->integer('nid');
 			$table->string('n_name', 255);
 			$table->string('n_ip', 255);
 			$table->boolean('n_status');
